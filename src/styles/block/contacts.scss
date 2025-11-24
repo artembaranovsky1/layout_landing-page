@@ -1,0 +1,126 @@
+.contacts {
+
+  &__content{
+    margin-top: 48px;
+
+    --columns: 2;
+
+    display: grid;
+    column-gap: 20px;
+
+    @include onTable {
+      column-gap: 24px;
+
+      --columns: 6;
+
+      margin-top: 56px;
+    }
+
+    @include onLaptop {
+      --columns: 12;
+    }
+  }
+
+
+  &__form{
+    background-color: aquamarine;
+    width: 100vw;
+    grid-column: 1 / -1;
+
+    @include onTable{
+      grid-column: 2 / -2;
+    }
+
+    @include onLaptop{
+      grid-column: span 1 / 6;
+    }
+  }
+
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 16px;
+    background-color: #F8F8FA;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding-left: 16px;
+
+    font-family: "Space Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+
+    &:hover {
+      border-color: #D5D7DE;
+    }
+
+    &:active,
+    &:focus {
+      border-color: #292929;
+      outline: none;
+    }
+
+    &--message {
+      width: 100%;
+      height: 148px;
+      padding-bottom: 100px;
+    }
+  }
+
+    &__info {
+      margin-top: 48px;
+      margin-bottom: 64px;
+
+      grid-column: 1/-1;
+
+
+      @include onTable{
+        margin-top: 80px;
+        margin-bottom: 120px;
+        grid-column: 2 / -2;
+
+
+        @include onLaptop{
+          margin: 0;
+          grid-row: 1;
+          grid-column: 7 / 13;
+        }
+      }
+
+
+
+      &--block{
+        margin: 24px;
+
+
+        }
+      }
+
+
+      &--value {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #9393A3;
+        margin-bottom: 8px;
+
+        margin-top: 0;
+        padding: 0;
+
+      }
+
+      &--text {
+        font-family: "Space Mono", monospace;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #191919;
+
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+

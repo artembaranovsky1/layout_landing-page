@@ -1,0 +1,96 @@
+@mixin onTable {
+  @media (min-width: $tablet_min-width) {
+    @content;
+  }
+}
+
+@mixin onLaptop {
+  @media (min-width: $laptop_min-width) {
+    @content;
+  }
+}
+
+
+@mixin constentPaddingInline(){
+  padding-inline: 20px;
+
+  @include onTable{
+    padding-inline: 72px;
+  }
+
+  @include onLaptop{
+    padding-inline: 120px;
+  }
+}
+
+@mixin constentPaddingBlock(){
+  padding-block: 24px ;
+
+  @include onTable{
+    padding-block: 36px;
+  }
+}
+
+@mixin hover($property, $toValue){
+  transition: #{$property} 0.3s;
+  &:hover{
+    #{$property}: $toValue;
+  }
+}
+
+@mixin lineMenu($property: width, $toValue: 0) {
+  position: relative;
+
+
+.container {
+  box-sizing: border-box;
+  padding-inline: 20px;
+
+  @include constentPaddingInline;
+  @include constentPaddingBlock;
+}
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $main-text-color;
+
+    transition: #{$property} 0.3s;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left;
+  }
+
+  &:hover::after {
+    #{$property}: $toValue;
+    opacity: 0.5;
+  }
+}
+
+
+@mixin pageGrid {
+  --columns: 2;
+
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @include onTable {
+    column-gap: 24px;
+
+    --columns: 6;
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
+
+  @include onLaptop {
+    --columns: 12;
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
+}
+

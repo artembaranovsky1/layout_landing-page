@@ -1,0 +1,42 @@
+.header {
+  //display: none !important;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/src/images/background-image.png");
+
+
+  &__content {
+    box-sizing: border-box;
+
+    @include constentPaddingInline;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+  }
+
+  &__bottom{
+    padding-bottom: 40px;
+
+
+    @include onTable {
+      padding-bottom: 65px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+
+    @include onTable{
+      font-size: 48px;
+    };
+  }
+}
+
