@@ -3,36 +3,35 @@
     display: grid;
   }
 
-  &__photos{
-    @include pageGrid;
+  &__photos {
+    @include page-grid;
 
     margin-bottom: 16px;
   }
 
-  &__link{
+  &__link {
     @include hover(transform, scale(1.03));
 
     position: relative;
 
-    &--wide{
-      @include onTable{
+    &--wide {
+      @include on-tablet {
         grid-column: span 4;
       }
 
-      @include onLaptop{
+      @include on-desktop {
         grid-column: span 8;
       }
     }
-    &--square{
+    &--square {
       height: 0;
       padding-bottom: 100%;
 
-      @include onTable{
+      @include on-tablet {
         grid-column: span 2;
-
       }
 
-      @include onLaptop{
+      @include on-desktop {
         grid-column: span 4;
       }
     }
@@ -43,7 +42,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
   }
 }
 
@@ -54,11 +52,11 @@
   margin: 0;
   margin-bottom: 40px;
 
-  @include onTable{
+  @include on-tablet {
     margin-bottom: 56px;
   }
 
-  @include onLaptop{
+  @include on-desktop {
     font-size: 24px;
   }
 }

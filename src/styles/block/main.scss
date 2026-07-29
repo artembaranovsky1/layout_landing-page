@@ -6,17 +6,16 @@
     row-gap: 96px;
     padding-block: 96px;
 
-    @include constentPaddingInline;
+    @include constent-padding-inline;
 
-    @include onTable {
+    @include on-tablet {
       row-gap: 120px;
       padding-block: 120px;
     }
 
-    @include onLaptop {
+    @include on-desktop {
       row-gap: 120px;
       padding-block: 120px;
     }
   }
 }
-

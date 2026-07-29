@@ -1,18 +1,17 @@
 .footer {
-
-  &__image{
-    background-image: url("/src/images/footer.png");
+  &__image {
+    background-image: url('/src/images/footer.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 200px;
 
-    @include onTable{
+    @include on-tablet {
       height: 400px;
     }
 
-    @include onLaptop{
+    @include on-desktop {
       height: 460px;
     }
   }

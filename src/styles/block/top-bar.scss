@@ -1,32 +1,40 @@
 .top-bar {
-  @include constentPaddingBlock;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  padding-block: 24px;
 
-
-  &__logo {
-    height: 16px;
-    width: 125px;
-    display: flex;
-
-    @include hover(transform, scale(1.2));
-
-    @include onTable{
-      height: 24px;
-      width: 172px;
-    }
+  @include on-tablet {
+    padding-block: 36px;
   }
+}
 
-  &__icons {
-    display: flex;
-    gap: 24px;
+.top-bar__logo {
+  height: 16px;
+  width: 125px;
+  display: flex;
+  transition: transform 0.3s;
+}
 
-    @include onTable{
-      gap: 32px;
-    }
+.top-bar__logo:hover {
+  transform: scale(1.2);
+}
 
+@media (min-width: 576px) {
+  .top-bar__logo {
+    height: 24px;
+    width: 172px;
+  }
+}
+
+.top-bar__icons {
+  display: flex;
+  gap: 24px;
+}
+
+@media (min-width: 576px) {
+  .top-bar__icons {
+    gap: 32px;
   }
 }
