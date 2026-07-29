@@ -13,6 +13,29 @@
 
   &--phone {
     background-image: url('/src/images/icons/icon-phone-svg.svg');
+
+    &::before {
+      content: "+1 234 555-55-55";
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 8px);
+      transform: translateY(-50%);
+
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: opacity 0.3s;
+      color: $main-text-color;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
   }
 
   &--menu {
