@@ -158,7 +158,9 @@
           </div>
           <h3 class="categories__title">Accessories</h3>
         </div>
-        <button type="button" class="button button__viewAll">View all</button>
+        <a href="#">
+          <button href="#" type="button" class="button button__viewAll">View all</button>
+        </a>
       </section>
 
 
@@ -187,13 +189,14 @@
       <section class="contacts" id="contacts">
         <h2 class="section-title">Contact us</h2>
         <div class="contacts__content">
-          <form class="contacts__form">
-            <input type="text" name="name" id="name" class="contacts__input contacts__input--name" placeholder="Name">
-            <input type="text" name="email" id="email" class="contacts__input contacts__input--email"
-                   placeholder="Email">
+          <form class="contacts__form" id="contacts-form">
+            <input type="text" name="name" id="name" class="contacts__input contacts__input--name" placeholder="Name"
+                   required>
+            <input type="email" name="email" id="email" class="contacts__input contacts__input--email"
+                   placeholder="Email" required>
             <input type="text" name="massage" id="massage" class="contacts__input contacts__input--message"
-                   placeholder="Massage">
-            <button type="reset" class="button">Send</button>
+                   placeholder="Massage" required>
+            <button type="submit" class="button">Send</button>
           </form>
 
           <div class="contacts__info">
