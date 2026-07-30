@@ -1,36 +1,38 @@
 .icon {
   display: block;
-  height: 24px;
   width: 24px;
+  height: 24px;
   background-size: contain;
 
   @include hover(transform, scale(1.2));
 
   @include on-tablet {
-    height: 32px;
     width: 32px;
+    height: 32px;
   }
 
   &--phone {
     background-image: url('/src/images/icons/icon-phone-svg.svg');
 
     &::before {
+      pointer-events: none;
       content: "+1 234 555-55-55";
+
       position: absolute;
       top: 50%;
       right: calc(100% + 8px);
       transform: translateY(-50%);
 
-      white-space: nowrap;
-      pointer-events: none;
-      opacity: 0;
-
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: opacity 0.3s;
       color: $main-text-color;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      white-space: nowrap;
+
+      opacity: 0;
+
+      transition: opacity 0.3s;
     }
 
     &:hover::before {

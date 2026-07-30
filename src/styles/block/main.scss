@@ -4,18 +4,21 @@
   &__content {
     display: grid;
     row-gap: 96px;
-    padding-block: 96px;
+    padding-top: 64px;
+    padding-bottom: 96px;
 
     @include constent-padding-inline;
 
     @include on-tablet {
       row-gap: 120px;
-      padding-block: 120px;
+      padding-top: 120px;
+      padding-bottom: 120px;
     }
 
     @include on-desktop {
       row-gap: 120px;
-      padding-block: 120px;
+      padding-top: 120px;
+      padding-bottom: 120px;
     }
   }
 }

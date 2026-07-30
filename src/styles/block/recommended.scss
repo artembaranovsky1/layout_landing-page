@@ -6,8 +6,6 @@
   }
 
   &__product {
-    @include hover(transform, scale(1.03));
-
     grid-column: 1/-1;
 
     @include on-tablet {

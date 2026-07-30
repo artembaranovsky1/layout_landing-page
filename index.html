@@ -41,6 +41,7 @@
   </div>
 </header>
 
+
 <aside class="menu page__menu" id="menu">
 
   <div class="menu__content">
@@ -74,25 +75,37 @@
 <main class="main">
   <div class="container">
     <div class="main__content">
+
+
       <section class="recommended" id="recommended">
         <h2 class="section-title">Recommended</h2>
         <div class="recommended__products">
           <article class="product recommended__product">
-            <img src="src/images/recomended/phone-1.png" alt="phone-1" class="product__photo">
+
+
+            <a href="#" class="product__link">
+              <img src="src/images/recomended/phone-1.png" alt="phone-1" class="product__photo">
+            </a>
+
+
             <h3 class="product__name">Phone (1)</h3>
             <p class="product__description">Designed with instinct, to bring joy back to the everyday. Through the Glyph
               Interface, a perfected OS and exceptional dual camera. All startlingly fast.</p>
             <p class="product__price">$ 499.00</p>
           </article>
           <article class="product recommended__product">
-            <img src="src/images/recomended/ear-2.png" alt="ear-2" class="product__photo">
+            <a href="#" class="product__link">
+              <img src="src/images/recomended/ear-2.png" alt="ear-2" class="product__photo">
+            </a>
             <h3 class="product__name">Ear (2)</h3>
             <p class="product__description">Perfecting the path from artist to ear. So that music sounds just as it was
               intended.</p>
             <p class="product__price">$ 149.00</p>
           </article>
           <article class="product recommended__product">
-            <img src="src/images/recomended/ear-stick.png" alt="ear-stick" class="product__photo">
+            <a href="#" class="product__link">
+              <img src="src/images/recomended/ear-stick.png" alt="ear-stick" class="product__photo">
+            </a>
             <h3 class="product__name">Ear (stick)</h3>
             <p class="product__description">Tech you can’t feel. Leaving just space for sound to come to life. Powered
               by custom sound technology.</p>
@@ -106,10 +119,14 @@
         <div class="categories__wrapper">
 
           <div class="categories__photos">
+
+
             <a href="#" class="categories__link categories__link--wide">
               <img src="src/images/image-1.png"
                    class="categories__photo">
             </a>
+
+
             <a href="#" class="categories__link categories__link--square">
               <img src="src/images/image-2.png"
                    class="categories__photo">
@@ -141,7 +158,7 @@
           </div>
           <h3 class="categories__title">Accessories</h3>
         </div>
-        <button type="button" class="button">View all</button>
+        <button type="button" class="button button__viewAll">View all</button>
       </section>
 
 
@@ -170,14 +187,15 @@
       <section class="contacts" id="contacts">
         <h2 class="section-title">Contact us</h2>
         <div class="contacts__content">
-          <form action="contacts__form">
+          <form class="contacts__form">
             <input type="text" name="name" id="name" class="contacts__input contacts__input--name" placeholder="Name">
             <input type="text" name="email" id="email" class="contacts__input contacts__input--email"
                    placeholder="Email">
             <input type="text" name="massage" id="massage" class="contacts__input contacts__input--message"
                    placeholder="Massage">
-            <button type="button" class="button">Send</button>
+            <button type="reset" class="button">Send</button>
           </form>
+
           <div class="contacts__info">
             <div class="contacts__info--block">
               <p class="contacts__info--value">Phone</p>
@@ -218,5 +236,6 @@
     </section>
   </div>
 </footer>
+
 </body>
 </html>
